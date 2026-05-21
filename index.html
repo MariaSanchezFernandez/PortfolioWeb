@@ -1,412 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Sánchez Fernández</title>
+    <title>María Sánchez · Frontend & Mobile Developer</title>
     <link rel="shortcut icon" href="./img/msf.png" />
-
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="responsive.css">
-    <!-- FUENTES DE LETRAS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
-    
-    
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="scroll">
-    <header id="header">
-        <a href="#sobreMi" class="cabecera">Sobre mí</a>
-        <a href="#proyectos" class="cabecera">Proyectos</a>
-        <a href="#contacto" class="cabecera">Contacto</a> 
-    </header>
-    <section class="inicio">
-        <div class="nombreTitulo">
-            <h1><span class="letraStrong">María</span>Sánchez Fernández</h1>
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────────────────── -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div class="nav-overlay" id="navOverlay"></div>
+<header id="header">
+    <a href="#inicio" class="nav-logo">MSF</a>
+    <nav class="nav-links" id="navLinks">
+        <a href="#sobre-mi"   class="nav-link">Sobre mí</a>
+        <a href="#formacion"  class="nav-link">Experiencia</a>
+        <a href="#habilidades" class="nav-link">Stack</a>
+        <a href="#proyectos"  class="nav-link">Proyectos</a>
+        <a href="#contacto"   class="nav-link">Contacto</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- ─── HERO ─────────────────────────────────────────────────── -->
+<section class="hero" id="inicio">
+    <div class="hero-top">
+        <span class="hero-badge">Disponible para proyectos</span>
+        <span class="hero-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Úbeda, Jaén
+        </span>
+    </div>
+
+    <div class="hero-body">
+        <div class="hero-name-col">
+            <h1 class="hero-name">
+                <span class="reveal-line">María</span>
+                <span class="reveal-line">Sánchez</span>
+                <span class="reveal-line">Fernández</span>
+            </h1>
         </div>
-        <div class="wrapped">
-            <h2>Desarrollo</h2>
-            <div class="palabras"> <span>IOS</span>
-                <span>Android</span>
-                <span>Web</span>
-                <span>UI/UX</span>
-                <span>Backend</span>
-                <span>IOS</span>
+        <div class="hero-info-col">
+            <p class="hero-role">Frontend &amp;<br>Mobile Developer</p>
+            <p class="hero-desc">Desarrollo aplicaciones multiplataforma donde el código y el diseño trabajan juntos para crear experiencias que importan.</p>
+            <div class="hero-ctas">
+                <a href="#proyectos" class="btn-accent">Ver proyecto</a>
+                <a href="#contacto" class="btn-text">Hablemos <span>→</span></a>
             </div>
         </div>
-        
-        <div class="bola" id="bola"></div>
-    </section>
-    <section class="sobreMi" id="sobreMi">
-        <h1>¡Hola!</h1>
-        <h2>Soy María Sánchez Fernández, especializada en <span style="text-decoration: underline;
-            text-decoration-color: #0ACF83;
-            text-underline-offset: 5px;">desarrollo de aplicaciones web y móviles</span></h2>
-        <p>Actualmente estoy formándome en este sector tan amplio del desarrollo de aplicaciones, recogiendo experiencia de diferentes proyectos que me plantean y encuentro. Gracias a esto, me considero una persona eficaz, resolutiva, proactiva y comprometida con el trabajo. 
-        Me adapto rápidamente a nuevos entornos y tecnologías, lo que me permite enfrentarme a cualquier reto que se me proponga. <br><br> <span>Mi objetivo principal es seguir asumiendo nuevos retos que me permitan consolidar mi experiencia, aportar valor a los proyectos en los que participe y evolucionar continuamente en mi carrera profesional dentro de este campo.</span>
-        </p>
-        <h1 class="tituloMalSituado">Habilidades técnicas</h1>
+    </div>
 
-        <div class="habilidadesTecnicas">
+    <div class="hero-foot">
+        <div class="hero-socials">
+            <a href="https://github.com/MariaSanchezFernandez" target="_blank" aria-label="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/mariasanchezfernandez/" target="_blank" aria-label="LinkedIn">LI</a>
+            <a href="mailto:sanchez.fdez.maria@gmail.com" aria-label="Email">EM</a>
+        </div>
+        <div class="hero-scroll-hint" id="scrollDown">scroll ↓</div>
+    </div>
+</section>
 
-            <div class="fotosHabiliadesTecnicas">
-                <div >
-                    <img src="./img/Swift.png" alt="">
-                    <img src="./img/Kotlin.png" alt="">
-                    <img src="./img/html.png" alt="">
-                    <img src="./img/css.png" alt="">
-                    <img src="./img/javaScript.png" alt="">
-                    
-                </div>
-                <div>
-                    <img src="./img/github.png" alt="">
-                    <img src="./img/visualStudioCode.png" alt="">
-                    <img src="./img/Figma.png" alt="">
-                    <img src="./img/wordpress.png" alt="">
-                    <img src="./img/mySql.png" alt="">
-
+<!-- ─── SOBRE MÍ ──────────────────────────────────────────────── -->
+<section class="section" id="sobre-mi">
+    <div class="container">
+        <div class="sec-label fade-in">01 — Sobre mí</div>
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <p class="lead">Desarrolladora de aplicaciones multiplataforma especializada en el sector salud y la IA.</p>
+                <p>Mi trayectoria me ha enseñado a trabajar en equipo, asumir responsabilidades de manera organizada y mantener siempre la atención al detalle. Hablo <strong>español</strong> e <strong>inglés</strong>, por lo que puedo desenvolverme sin problemas en entornos internacionales.</p>
+                <p>Busco proyectos donde la tecnología resuelva problemas reales y donde pueda seguir creciendo como profesional.</p>
+                <div class="about-actions">
+                    <a download href="./cv/CV_MaríaSánchezFernández.pdf" class="btn-accent" id="downloadCV">Descargar CV</a>
                 </div>
             </div>
-            <div class="letrasHabilidadesTecnicas">
-                <div>
-                    <h2>Lenguajes de programación</h2>
+            <div class="about-stats fade-in">
+                <div class="astat">
+                    <span class="astat-n">4<span class="astat-plus">+</span></span>
+                    <span class="astat-l">Proyectos</span>
                 </div>
-                <div>
-                    <h2>Software</h2>
+                <div class="astat">
+                    <span class="astat-n">2</span>
+                    <span class="astat-l">Idiomas</span>
+                </div>
+                <div class="astat">
+                    <span class="astat-n">10<span class="astat-plus">+</span></span>
+                    <span class="astat-l">Tecnologías</span>
+                </div>
+                <div class="astat">
+                    <span class="astat-n">∞</span>
+                    <span class="astat-l">Movilidad</span>
                 </div>
             </div>
         </div>
-        
-        <a download="CV_MaríaSánchezFernández.pdf" href="./cv/CV_MaríaSánchezFernández.pdf" class="button button--stroke" data-block="button" id="downloadCV">
-            <span class="button__flair"></span>
-            <span class="button__label">Descargar CV</span>
-        </a>
-        <button class="botonMovil" ><a download="CV_MaríaSánchezFernández.pdf" href="./cv/CV_MaríaSánchezFernández.pdf" id="downloadCV">Descargar CV</a></button>       
-        
+    </div>
+</section>
 
-    </section>
-    <section class="proyectos" id="proyectos">
-        <div class="tarjetasProyectosPrincipales">
-            <h2>Proyectos</h2>
+<!-- ─── FORMACIÓN & EXPERIENCIA ──────────────────────────────── -->
+<section class="section section-alt" id="formacion">
+    <div class="container">
+        <div class="sec-label fade-in">02 — Formación & Experiencia</div>
 
-            <br><br><br><br>
-            <div class="card" id="tarjeta1">
-                <div class="proyectoMapamundi">
-                    <div class="imagenMapamundi">
-                        <img src="./img/mapamundii.png" alt="">
+        <div class="tl-list">
+
+            <div class="tl-row fade-in">
+                <div class="tl-period">Mar 2025 —<br>Actualidad</div>
+                <div class="tl-main">
+                    <div class="tl-role">Desarrolladora</div>
+                    <div class="tl-org">Clínicas dentales Cleardent</div>
+                    <p class="tl-desc">Desarrollo en el sector salud con estándares de calidad altos y contacto directo con el cliente. Proyectos reales con tecnologías de vanguardia en IA.</p>
+                </div>
+                <div class="tl-type work">Trabajo</div>
+            </div>
+
+            <div class="tl-row fade-in">
+                <div class="tl-period">Sept 2025 —<br>Ene 2026</div>
+                <div class="tl-main">
+                    <div class="tl-role">Master en Desarrollo con IA</div>
+                    <div class="tl-org">Universidad Isabel I</div>
+                    <p class="tl-desc">Integración de IA en flujos de desarrollo: prompt engineering, automatizaciones y uso de LLMs aplicados a proyectos reales.</p>
+                </div>
+                <div class="tl-type edu">Formación</div>
+            </div>
+
+            <div class="tl-row fade-in">
+                <div class="tl-period">Sept 2023 —<br>Jun 2025</div>
+                <div class="tl-main">
+                    <div class="tl-role">Grado Superior en DAM</div>
+                    <div class="tl-org">Escuela Estech</div>
+                    <p class="tl-desc">Programación, diseño y desarrollo de aplicaciones para diferentes plataformas, optimizando la experiencia del usuario.</p>
+                </div>
+                <div class="tl-type edu">Formación</div>
+            </div>
+
+            <div class="tl-row fade-in">
+                <div class="tl-period">Sept 2021 —<br>Jun 2023</div>
+                <div class="tl-main">
+                    <div class="tl-role">Bachillerato Ciencias Sociales</div>
+                    <div class="tl-org">IES San Juan de la Cruz</div>
+                    <p class="tl-desc">Desarrollo de habilidades críticas y analíticas.</p>
+                </div>
+                <div class="tl-type edu">Formación</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ─── STACK ─────────────────────────────────────────────────── -->
+<section class="section" id="habilidades">
+    <div class="container">
+        <div class="sec-label fade-in">03 — Stack tecnológico</div>
+
+        <div class="stack-grid fade-in">
+            <div class="stack-col">
+                <h3 class="stack-cat">Lenguajes</h3>
+                <ul class="stack-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" alt="">Kotlin</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" alt="">Swift</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="">Java</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="">JavaScript</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="">TypeScript</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="">PHP</li>
+                </ul>
+            </div>
+            <div class="stack-col">
+                <h3 class="stack-cat">Frameworks</h3>
+                <ul class="stack-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="">React</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="">Laravel</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="">Bootstrap</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="">HTML5</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="">CSS3</li>
+                </ul>
+            </div>
+            <div class="stack-col">
+                <h3 class="stack-cat">Herramientas</h3>
+                <ul class="stack-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="">Figma</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" alt="">Android Studio</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" alt="">Xcode</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="">Docker</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="">GitHub</li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="">MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PROYECTO ──────────────────────────────────────────────── -->
+<section class="section proj-dark" id="proyectos">
+    <div class="container">
+        <div class="sec-label fade-in" style="color:rgba(255,255,255,0.4)">04 — Proyecto</div>
+
+        <div class="proj-title-row fade-in">
+            <span class="proj-index">01.</span>
+            <h2 class="proj-name">cursosumme<span class="acc">.es</span></h2>
+        </div>
+
+        <div class="proj-layout fade-in">
+            <div class="proj-left">
+                <p class="proj-desc">Plataforma e-learning completa para academia privada — panel de administración, gestión de alumnos, streaming de vídeo seguro, sistema de soporte y pagos con Stripe.</p>
+                <div class="proj-tech">
+                    <span>Astro</span>
+                    <span>TypeScript</span>
+                    <span>PHP 8</span>
+                    <span>MySQL</span>
+                    <span>Stripe</span>
+                </div>
+                <a href="https://cursosumme.es" target="_blank" class="btn-accent-inv">Ver web →</a>
+            </div>
+
+            <div class="proj-mockup" id="projMockup">
+                <div class="mockup-browser">
+                    <div class="mockup-bar">
+                        <span class="wdot r"></span>
+                        <span class="wdot y"></span>
+                        <span class="wdot g"></span>
+                        <div class="mockup-url">
+                            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                            cursosumme.es
+                        </div>
                     </div>
-                    <div class="letrasMapamundi">
-                        <h1>Mapamundi</h1>
-                        <p>Aplicación Android creada usando Android Studio y Kotlin con su correspondiente navegación. Trata sobre las diferentes épocas de la historia con un breve resumen de cada una acompañada de imágenes.</p>
-                        <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/MariaSanchezFernandez/Proyecto2Trimestre" target="_blank"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/OzWuhJlYiDLkKRYxLMk4HT/Untitled?node-id=0-1&t=TZE0zoFLsZF2ZaPq-1" target="_blank"><button>Ver prototipo</button></a>
-                            
+                    <div class="mockup-screen">
+                        <div class="ms-sidebar">
+                            <div class="ms-logo"></div>
+                            <div class="ms-nav active"></div>
+                            <div class="ms-nav"></div>
+                            <div class="ms-nav"></div>
+                            <div class="ms-nav"></div>
+                        </div>
+                        <div class="ms-body">
+                            <div class="ms-topbar">
+                                <div class="ms-h"></div>
+                                <div class="ms-badge-dot"></div>
+                            </div>
+                            <div class="ms-cards">
+                                <div class="ms-card accent-card"><div class="ms-ct"></div><div class="ms-cl s"></div></div>
+                                <div class="ms-card"><div class="ms-ct"></div><div class="ms-cl s"></div></div>
+                                <div class="ms-card"><div class="ms-ct"></div><div class="ms-cl s"></div></div>
+                            </div>
+                            <div class="ms-rows">
+                                <div class="ms-row hrow"><div class="ms-c big"></div><div class="ms-c"></div><div class="ms-c"></div></div>
+                                <div class="ms-row"><div class="ms-c big"></div><div class="ms-c"></div><div class="ms-c"></div></div>
+                                <div class="ms-row"><div class="ms-c big"></div><div class="ms-c"></div><div class="ms-c"></div></div>
+                                <div class="ms-row"><div class="ms-c big"></div><div class="ms-c"></div><div class="ms-c"></div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card tarjeta2" id="tarjeta2" >
-                <div class="proyectoMovieList">
-                    <div class="blur-background"></div>
-                    
-                    <div class="letrasMovieList" style="z-index: 1;">
-                        <img class="logoPlans" style="height: 80px; margin-top: 10px;" src="./img/logoPlans.png" alt="Logo Plans">
-                        <p style="width: 100%; padding: 30px;">Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Cuenta con su propia navegación, búsqueda, algoritmo y más. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. La inspiración para este proyecto son páginas como Letterboxd o FilmAffinity.
-                        </p>
-                        <span>Proyecto colaborativo en el que se diseñó y programó tanto el backend como el frontend para crear una web de reseñas de películas y series. Para almacenar los datos de las películas y series, de los usuarios y los comentarios se creó una base de datos propia. </span>
-                        <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/devJuanMartinez/Plans" target="_blank"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/NzMOh5BqpUClkfFmLgbuoB/Plans?node-id=0-1&t=3ApfFL80XnxcPSU6-1" target="_blank"><button>Ver prototipo</button></a>
-                        </div>
-                    </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="proj-stats fade-in">
+            <div class="ps"><span class="ps-n counter" data-target="100">0</span><span class="ps-suf">%</span><span class="ps-l">Streaming seguro</span></div>
+            <div class="ps-div"></div>
+            <div class="ps"><span class="ps-n counter" data-target="4">0</span><span class="ps-l">Módulos principales</span></div>
+            <div class="ps-div"></div>
+            <div class="ps"><span class="ps-n">1</span><span class="ps-l">Plataforma en producción</span></div>
+            <div class="ps-div"></div>
+            <div class="ps"><span class="ps-n counter" data-target="5">0</span><span class="ps-l">Tecnologías</span></div>
+        </div>
+
+        <!-- Features -->
+        <div class="proj-feats fade-in">
+            <div class="pfeat tilt-card">
+                <div class="pfeat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
                 </div>
+                <h4>Panel de admin</h4>
+                <p>Gestión completa de cursos, contenido y alumnos.</p>
             </div>
-            <div class="card" id="tarjeta3">
-                <div class="proyectoMovieList">
-                    <div class="imagenMovieList">
-                        <img src="./img/movieList.png" alt="">
-                    </div>
-                    <div class="letrasMovieList">
-                        <h1>MovieList</h1>
-                        <p style="display: block !important;">Proyecto colaborativo basado en la puntuación y seguimiento de películas, creada en Android Studio usando una Api externa, incluyendo inició de sesión y navegación, al igual como búsqueda o navegación interna. Datos importados de API pública sobre películas</p>
-                        <div class="botonesAppyPrototipo">
-                            <a href="https://github.com/MariaSanchezFernandez/proyectoProgramacion" target="_blank"><button>Ver app</button></a>
-                            <a href="https://www.figma.com/design/tjBy4oQgdvBNGBjd5v4xYe/Proyecto-Movie-API?node-id=0-1&t=YZOz2tvPnGm11uHk-1" target="_blank"><button>Ver prototipo</button></a>
-                        </div>
-                    </div>
+            <div class="pfeat tilt-card">
+                <div class="pfeat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.361a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
                 </div>
+                <h4>Streaming seguro</h4>
+                <p>Vídeo protegido por roles, sin opción de descarga.</p>
+            </div>
+            <div class="pfeat tilt-card">
+                <div class="pfeat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                </div>
+                <h4>Pagos con Stripe</h4>
+                <p>Cobros y suscripciones con Stripe Checkout.</p>
+            </div>
+            <div class="pfeat tilt-card">
+                <div class="pfeat-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h4>Gestión de alumnos</h4>
+                <p>Registro, progreso, roles y soporte integrado.</p>
             </div>
         </div>
-        
-        <div class="proyectosSecundarios">
-            <h2>Más proyectos</h2>
-            <div>
-                <a href="#">
-                    <img src="./img/fondo.png" alt="">
-                </a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+
+    </div>
+</section>
+
+<!-- ─── CONTACTO ──────────────────────────────────────────────── -->
+<section class="section section-alt" id="contacto">
+    <div class="container">
+        <div class="sec-label fade-in">05 — Contacto</div>
+
+        <div class="contact-layout fade-in">
+            <div class="contact-left">
+                <h2 class="contact-big">Hablemos<span class="acc">.</span></h2>
+                <p class="contact-sub">¿Tienes un proyecto en mente? Escríbeme.</p>
+                <div class="contact-links">
+                    <a href="mailto:sanchez.fdez.maria@gmail.com" class="clink">
+                        <span class="clink-label">Email</span>
+                        sanchez.fdez.maria@gmail.com
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=34681085558" target="_blank" class="clink">
+                        <span class="clink-label">WhatsApp</span>
+                        +34 681 08 55 58
+                    </a>
+                    <a href="https://www.linkedin.com/in/mariasanchezfernandez/" target="_blank" class="clink">
+                        <span class="clink-label">LinkedIn</span>
+                        /mariasanchezfernandez
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="contacto" id="contacto">
-        <h2>¿Hablamos y así me cuentas tus ideas?</h2>
-        <br>
-            <form id="formulario" action="https://formspree.io/f/xjkkpyap" method="POST" class="formularioContacto">
-                <div class="campoFormulario">               
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+            <form id="formulario" action="https://formspree.io/f/xjkkpyap" method="POST" class="contact-form">
+                <div class="form-row">
+                    <div class="field">
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="field">
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" placeholder="Tu apellido" required>
+                    </div>
                 </div>
-                <div class="campoFormulario">
-                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="tu@email.com" required>
                 </div>
-                <div class="campoFormulario">                    
-                    <input type="email" id="email" name="email" placeholder="Email" required >
+                <div class="field">
+                    <label>Mensaje</label>
+                    <textarea name="message" rows="5" placeholder="Cuéntame tu proyecto..." required></textarea>
                 </div>
-                <div class="campoFormulario" >                   
-                    <textarea id="message" name="message" placeholder="Mensaje" required ></textarea>
-                </div>
-                <div class="campoFormulario">
-                    <button type="submit">Enviar</button>
-                </div>
+                <button type="submit" class="btn-accent">Enviar →</button>
             </form>
-    
-    </section>
-    <footer>
-        <div class="footerContent">
-            <div class="brand">
-                <h2>MSF</h2>
-                <p>¡Muchas gracias por visitar mi portfolio web!</p>
-            </div>
-            <div class="socials">
-                <a href="https://api.whatsapp.com/send?phone=34681085558"><img src="./img/telefono.png" alt="Teléfono"></a>
-                <a href="mailto:sanchez.fdez.maria@gmail.com"><img src="./img/correo.png" alt="Correo"></a>
-                <a href="https://github.com/MariaSanchezFernandez"><img src="./img/github.png" alt="Correo"></a>
-                <a href="https://www.linkedin.com/in/mariasanchezfernandez/"><img src="./img/Linkedin.png" alt=""></a>
-            </div>
         </div>
-    </footer>
-    
-    <button id="scrollToTop" class="scroll-to-top">▲</button>
+    </div>
+</section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    
-    <script>
-       
-    //Animación de las tarjetas
-    document.addEventListener('DOMContentLoaded', () => {
+<!-- ─── FOOTER ────────────────────────────────────────────────── -->
+<footer>
+    <div class="container footer-inner">
+        <div class="footer-left">
+            <span class="footer-logo">MSF</span>
+            <span class="footer-copy">© 2025 María Sánchez Fernández</span>
+        </div>
+        <div class="footer-socials">
+            <a href="https://api.whatsapp.com/send?phone=34681085558" target="_blank" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:sanchez.fdez.maria@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+            <a href="https://github.com/MariaSanchezFernandez" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mariasanchezfernandez/" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
 
-        gsap.registerPlugin(ScrollTrigger);
-
-        let cards = gsap.utils.toArray(".card");
-
-        cards.forEach((card, i) => {
-            ScrollTrigger.create({
-                trigger: card,
-                start: "top-=20%",
-                end: "top bottom",
-                endTrigger: ".proyectosSecundarios",
-                pin: true,
-                pinSpacing: false,
-                markers: false,
-                scrub: 2,
-                anticipatePin: 1
-            });
-        }); 
-    });
-
-    //Bola para dar comienzo con el scroll 
-
-    let bolaComienzo = document.getElementById('bola');
-
-    bolaComienzo.addEventListener('click', () => {
-        document.querySelector('#sobreMi').scrollIntoView({
-            behavior: 'smooth'
-        })
-        
-    })
-
-    //Cambiar color de la cabecera al pasar por sobreMi Y Contacto
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const headerLinks = document.querySelectorAll('.cabecera');
-        const sobreMi = document.getElementById('sobreMi');
-        const contacto = document.getElementById('contacto');
-
-        const observerOptions = {
-            root: null,
-            threshold: 0.5, 
-        };
-
-        const observerCallback = (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    headerLinks.forEach((link) => link.classList.add('cabecera-verde'));
-                } else {
-                    headerLinks.forEach((link) => link.classList.remove('cabecera-verde'));
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        observer.observe(sobreMi);
-        observer.observe(contacto);
-
-    });
-
-
-
-    //Botón hover
-
-    class Button {
-    constructor(buttonElement) {
-        this.block = buttonElement;
-        this.init();
-        this.initEvents();
-    }
-
-    init() {
-        const el = gsap.utils.selector(this.block);
-
-        this.DOM = {
-        button: this.block,
-        flair: el(".button__flair")
-        };
-
-        this.xSet = gsap.quickSetter(this.DOM.flair, "xPercent");
-        this.ySet = gsap.quickSetter(this.DOM.flair, "yPercent");
-    }
-
-    getXY(e) {
-        const { left, top, width, height } = this.DOM.button.getBoundingClientRect();
-
-        const xTransformer = gsap.utils.pipe(
-        gsap.utils.mapRange(0, width, 0, 100),
-        gsap.utils.clamp(0, 100)
-        );
-
-        const yTransformer = gsap.utils.pipe(
-        gsap.utils.mapRange(0, height, 0, 100),
-        gsap.utils.clamp(0, 100)
-        );
-
-        return {
-        x: xTransformer(e.clientX - left),
-        y: yTransformer(e.clientY - top)
-        };
-    }
-
-    initEvents() {
-        this.DOM.button.addEventListener("mouseenter", (e) => {
-        const { x, y } = this.getXY(e);
-
-        this.xSet(x);
-        this.ySet(y);
-
-        gsap.to(this.DOM.flair, {
-            scale: 1,
-            duration: 0.4,
-            ease: "power2.out"
-        });
-        });
-
-        this.DOM.button.addEventListener("mouseleave", (e) => {
-        const { x, y } = this.getXY(e);
-
-        gsap.killTweensOf(this.DOM.flair);
-
-        gsap.to(this.DOM.flair, {
-            xPercent: x > 90 ? x + 20 : x < 10 ? x - 20 : x,
-            yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
-            scale: 0,
-            duration: 0.3,
-            ease: "power2.out"
-        });
-        });
-
-        this.DOM.button.addEventListener("mousemove", (e) => {
-        const { x, y } = this.getXY(e);
-
-        gsap.to(this.DOM.flair, {
-            xPercent: x,
-            yPercent: y,
-            duration: 0.4,
-            ease: "power2"
-        });
-        });
-    }
-    }
-
-    const buttonElements = document.querySelectorAll('[data-block="button"]');
-
-    buttonElements.forEach((buttonElement) => {
-    new Button(buttonElement);
-    });
-
-    //Scroll hacia arriba
-
-    const scrollToTopButton = document.getElementById('scrollToTop');
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopButton.style.display = 'flex';
-        } else {
-            scrollToTopButton.style.display = 'none';
-        }
-    });
-
-    scrollToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-
-    // Color de formulario cambiado cuando esté relleno
-    const inputsAndTextareas = document.querySelectorAll('input, textarea');
-
-    inputsAndTextareas.forEach(element => {
-        element.addEventListener('input', () => {
-            if (element.value.trim() !== '') {
-                element.classList.add('filled'); 
-            } else {
-                element.classList.remove('filled'); 
-            }
-        });
-    });
-
-    let formulario = document.getElementById('formulario');
-    formulario.addEventListener('submit', function() {
-        setTimeout(function() {
-            formulario.reset();
-        }, 0); 
-    });
-
-    //Confetti
-
-    const button = document.getElementById('downloadCV');
-
-    button.addEventListener('click', () => {
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
-    });
-
-    </script>
+<button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">↑</button>
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+<script>
+    // Hamburger / nav
+    const hamburger  = document.getElementById('hamburger');
+    const navLinks   = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+    function closeNav() {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        navOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', open);
+        navOverlay.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navOverlay.addEventListener('click', closeNav);
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
+    // Scroll header
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 40));
 
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 500));
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll down hint
+    document.getElementById('scrollDown').addEventListener('click', () =>
+        document.getElementById('sobre-mi').scrollIntoView({ behavior: 'smooth' }));
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.12 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Counters
+    const cntObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.querySelectorAll('.counter').forEach(el => {
+                const target = +el.dataset.target, t0 = performance.now();
+                const tick = now => {
+                    const p = Math.min((now - t0) / 1200, 1);
+                    el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target);
+                    if (p < 1) requestAnimationFrame(tick); else el.textContent = target;
+                };
+                requestAnimationFrame(tick);
+            });
+            cntObs.unobserve(entry.target);
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.proj-stats').forEach(el => cntObs.observe(el));
+
+    // Custom cursor
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    if (!isTouch) {
+        const dot  = document.getElementById('cursor-dot');
+        const ring = document.getElementById('cursor-ring');
+        let mx = -100, my = -100, rx = -100, ry = -100;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+        (function loop() {
+            rx += (mx - rx) * 0.14;
+            ry += (my - ry) * 0.14;
+            dot.style.left  = mx + 'px';
+            dot.style.top   = my + 'px';
+            ring.style.left = rx + 'px';
+            ring.style.top  = ry + 'px';
+            requestAnimationFrame(loop);
+        })();
+        document.querySelectorAll('a, button, .tl-row, .pfeat, .astat').forEach(el => {
+            el.addEventListener('mouseenter', () => ring.classList.add('big'));
+            el.addEventListener('mouseleave', () => ring.classList.remove('big'));
+        });
+        document.addEventListener('mousedown', () => dot.classList.add('click'));
+        document.addEventListener('mouseup',   () => dot.classList.remove('click'));
+    }
+
+    // Tilt cards
+    if (!isTouch) {
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const r = card.getBoundingClientRect();
+                const x = (e.clientX - r.left) / r.width  - 0.5;
+                const y = (e.clientY - r.top)  / r.height - 0.5;
+                card.style.transform = `perspective(600px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-4px)`;
+            });
+            card.addEventListener('mouseleave', () => card.style.transform = '');
+        });
+
+        // Mockup parallax
+        const mockup = document.getElementById('projMockup');
+        if (mockup) {
+            document.addEventListener('mousemove', e => {
+                const x = (e.clientX / window.innerWidth  - 0.5) * 10;
+                const y = (e.clientY / window.innerHeight - 0.5) * 6;
+                mockup.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${-y}deg)`;
+            });
+        }
+    }
+
+    // Confetti on CV download
+    document.getElementById('downloadCV').addEventListener('click', () =>
+        confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } }));
+
+    // Form reset + fill states
+    document.getElementById('formulario').addEventListener('submit', function() {
+        setTimeout(() => this.reset(), 100);
+    });
+    document.querySelectorAll('.contact-form input, .contact-form textarea').forEach(el => {
+        el.addEventListener('input', () => el.classList.toggle('filled', el.value.trim() !== ''));
+    });
+</script>
 
 </body>
 </html>
-
